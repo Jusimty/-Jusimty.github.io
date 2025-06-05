@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        h3 {
+            text-align: center;
+            color: #2196F3;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        ol li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        ol li:hover {
+            background-color: #45a049;
+        }
+
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1, h3 {
+                font-size: 1.5em;
+            }
+
+            ul, ol {
+                font-size: 1em;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jusimty</h1>
+    <img src="e691b40edbc4ac817e52c296bb6a4ae.jpg" alt="图片加载失败" height="200" width="150">
+    <hr>
+    <ul>
+        <li><b>性别：</b>女</li>
+        <li><b>电话：</b>15155495576</li>
+        <li><b>邮箱：</b>1403874467@qq.com </li>
+        <li><b>生日：</b>2005.02.02</li>
+        <li><b>兴趣：</b>看漫画</li>
+    </ul>
+    <hr>
+    <h3>教育背景Education</h3>
+
+    <style>
+        table th, table td {
+            text-align: center;
+        }
+    </style>
+
+    <table border="1" width="100%" cellspacing="0">
+        <tr>
+            <th>时间</th>
+            <th>学校</th>
+            <th>职务</th>
+        </tr>
+        <tr>
+            <td>2012</td>
+            <td>梅小</td>
+            <td>学生</td>
+        </tr>
+        <tr>
+            <td>2017</td>
+            <td>梅小</td>
+            <td>学生</td>
+        </tr>
+        <tr>
+            <td>2020</td>
+            <td>野寨</td>
+            <td>学生</td>
+        </tr>
+        <tr>
+            <td>2023</td>
+            <td>上外贸</td>
+            <td>学生</td>
+        </tr>
+    </table>
+    <hr>
+    <h3>工作经验</h3>
+    <ol>
+        <li>小学生</li>
+        <li>初中生</li>
+        <li>高中生</li>
+        <li>大学生</li>
+    </ol>
+</body>
+</html>
