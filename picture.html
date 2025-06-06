@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #myChart {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myChart"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['搜索引擎', '视频广告', '联盟广告', '邮件营销', '直接访问'],
+                datasets: [{
+                    data: [65, 15, 10, 10, 10],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 205, 86, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 205, 86, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + ' (' + context.raw + '%)';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                onClick: function(e, elements) {
+                    if (elements.length > 0) {
+                        const index = elements[0].index;
+                        const label = myChart.data.labels[index];
+                        const value = myChart.data.datasets[0].data[index];
+                        alert(`您点击了 ${label}，数量为 ${value}`);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
